@@ -115,7 +115,7 @@ class Command(object):
                 self.option_list = []
             return
 
-        args, varargs, keywords, defaults = inspect.getargspec(func)[:4]
+        args, varargs, keywords, defaults = inspect.getfullargspec (func)[:4]
         if inspect.ismethod(func):
             args = args[1:]
 
